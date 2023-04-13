@@ -7,7 +7,7 @@ const Label = ({ text }) => {
     >
       {text}
     </label>
-  )
+  );
 }
 
 Label.propTypes = {
