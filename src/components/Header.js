@@ -1,5 +1,7 @@
-const Header = ({ title }) => {
+import { useLocation } from 'react-router-dom';
 
+const Header = ({ title }) => {
+  const location = useLocation();
   const imgStyle = {
     width: '60px',
     height: '60px',
@@ -23,11 +25,13 @@ const Header = ({ title }) => {
   return (
     <header style={ headerStyle }>
       <img src="./logo192.png" style={ imgStyle } alt="Logo" /><span style={ titleStyle }>{ title }</span>
-
       <span style={ linksStyle }>
-        <a style={ linkStyle } href="/login">Login</a>
-        <a style={ linkStyle } href="/create_account">Create Account</a>
-        <a style={ linkStyle } href="/logout">Logout</a>
+        { location.pathname !== "/login" 
+        && (<a style={ linkStyle } href="/login">Login</a>) }
+        { location.pathname !== "/create_account" 
+        && (<a style={ linkStyle } href="/create_account">Create Account</a>) }
+        { location.pathname !== "/logout" 
+        && (<a style={ linkStyle } href="/logout">Logout</a>) }
       </span>
     </header>
   );

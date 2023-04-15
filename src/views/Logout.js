@@ -1,7 +1,10 @@
 
 const Logout = () => {
+    const divStyle = {
+        textAlign: 'left',
+    };
     return (
-        <div>Logged out successfully!</div>
+        <div style={ divStyle }>Logged out successfully!</div>
     );
 }
 

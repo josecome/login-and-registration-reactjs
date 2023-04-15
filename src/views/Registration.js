@@ -1,4 +1,4 @@
-import Form_registration from './components/Form_registration';
+import Form_registration from '../components/Form_registration';
 
 const Registration = () => {
     return (

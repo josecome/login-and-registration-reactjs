@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import Home from './views/Home';
 import About from './views/About';
 import Login from './views/Login';
+import Logout from './views/Logout';
+import Registration from './views/Registration';
 import Label from './components/Label';
 
 
@@ -19,6 +21,10 @@ function App() {
       />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/create_account' element={<Registration />} />
+        <Route path='/logout' element={<Logout />} />
+        
         <Route path='/About' element={<About />} />
       </Routes>
       <Footer />          
