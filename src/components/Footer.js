@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Footer = () => {
   const centerText = {
     textAlign: 'center',
@@ -11,7 +13,8 @@ const Footer = () => {
   };
   return (
     <div style={ divStyle }>
-      <p style={ centerText }>Copyright &copy; 2023</p>       
+      <p style={ centerText }>Copyright &copy; 2023</p>
+      <Link to='/about'>About</Link>
     </div>
   );
 }

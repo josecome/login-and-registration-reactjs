@@ -24,7 +24,7 @@ const Header = ({ title }) => {
 
   return (
     <header style={ headerStyle }>
-      <img src="./logo192.png" style={ imgStyle } alt="Logo" /><span style={ titleStyle }>{ title }</span>
+      <a href='/'><img src="./logo192.png" style={ imgStyle } alt="Logo" /></a><span style={ titleStyle }>{ title }</span>
       <span style={ linksStyle }>
         { location.pathname !== "/login" 
         && (<a style={ linkStyle } href="/login">Login</a>) }
