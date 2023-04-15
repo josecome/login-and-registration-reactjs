@@ -11,10 +11,10 @@ function App() {
   return (
     <div>
       <Header 
-      title="Text"
-    />
-    <Login />
-    <Footer />
+        title="Login and Registration System"
+      />
+      <Login />
+      <Footer />
     </div>
 
   );
