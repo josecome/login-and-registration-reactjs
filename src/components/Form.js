@@ -1,14 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { requestLogin } from '../features/auth/storeAuth'
 
 const Form = () => {
+
+    const dispatch = useDispatch()
+
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [password, setPassword] = useState('')
 
     const loginHandler = (e) => {
         e.preventDefault();
-
-        if (email.length > 0 && password.length > 0) {
-
+        console.log('form: ' + email + ',' + password)
+        if (email.length > 0 && password.length > 0) {            
+            dispatch(requestLogin('pass:' + email + ':' + password))
         }
     };    
     return (
