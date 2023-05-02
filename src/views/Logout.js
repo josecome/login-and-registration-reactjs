@@ -1,5 +1,11 @@
+import { useEffect } from "react";
 
-const Logout = () => {
+const Logout = ({ logOutUser }) => {
+    
+    useEffect(() => {    
+        logOutUser();
+      });
+
     const divStyle = {
         textAlign: 'left',
     };

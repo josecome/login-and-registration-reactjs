@@ -1,6 +1,14 @@
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from "react";
 
+const Home = (loginStatus) => {  
+  const navigate = useNavigate();
+  useEffect(() => {    
+    if(!loginStatus) {
+      navigate('/login')
+    }
+  }, [loginStatus]);
 
-const Home = () => {
   const spanStyle = {
     fontSize: '28px',
     marginTop: '20%',

@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { requestLogin } from '../features/auth/storeAuth'
 
-const Form = () => {
-
-    const dispatch = useDispatch()
+const Form = ({ loginUser }) => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')
@@ -13,7 +10,7 @@ const Form = () => {
         e.preventDefault();
         console.log('form: ' + email + ',' + password)
         if (email.length > 0 && password.length > 0) {            
-            dispatch(requestLogin('pass:' + email + ':' + password))
+            loginUser(email, password);
         }
     };    
     return (
